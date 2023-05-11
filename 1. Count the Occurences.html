@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count the occurences</title>
+</head>
+<body>
+<script>
+    function countWords(text) {
+        const words = text.split(" ");
+        const wordCount = new Map();
+        for(let i=0; i<words.length; i++) {
+            const word = words[i];
+            if (wordCount.has(word)) {
+                const count = wordCount.get(word);
+                wordCount.set(word, count + 1);
+            } else {
+                wordCount.set(word, 1);
+            }
+        }
+        return wordCount;
+    }   
+
+    //CALLING THE FUNCTION
+    const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod tellus at nisi iaculis, eget interdum felis ullamcorper.';
+const wordCount = countWords(text);
+console.log(wordCount);
+
+</script>
+</body>
+</html>
