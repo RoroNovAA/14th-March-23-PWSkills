@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Only unique items are allowed</title>
+</head>
+<body>
+    <script>
+        let data = [5, 12, 18, 27, 18, 5, 58, 89];
+
+        //FUNCTION TO REMOVE DUPLICATE ELEMENTS
+        function removeDuplicate(arr) {
+            return new Set(arr);
+        }
+
+        //CALLING THE FUNCTION
+        removeDuplicate(data);
+        console.log(removeDuplicate(data));
+    </script>
+</body>
+</html>
